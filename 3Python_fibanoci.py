@@ -1,12 +1,16 @@
-def Fibonacci(n):
-	if n < 0:
-		print("Incorrect input")
-	elif n == 0:
-		return 0
-	elif n == 1 or n == 2:
-		return 1
+# Python program to display the Fibonacci sequence
 
-	else:
-		return Fibonacci(n-1) + Fibonacci(n-2)
+def recur_fibo(n):
+   if n <= 1:
+       return n
+   else:
+       return(recur_fibo(n-1) + recur_fibo(n-2))
 
-print(Fibonacci(9))
+nterms = 10
+
+if nterms <= 0:
+   print("Plese enter a positive integer")
+else:
+   print("Fibonacci sequence:")
+   for i in range(nterms):
+       print(recur_fibo(i))
